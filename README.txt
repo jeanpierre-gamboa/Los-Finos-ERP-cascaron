@@ -6,3 +6,4 @@ BARTOLITO ERP - PROTOTIPO BASADO EN MENU_UNIFICADO.xlsx
 4. Cada aplicación construye dinámicamente sus grupos y opciones de menú según el Excel.
 5. El botón ▦ vuelve al selector de aplicaciones y ↪ cierra la sesión.
 6. No requiere servidor ni instalación.
+ Holi
