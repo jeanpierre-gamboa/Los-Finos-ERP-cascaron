@@ -535,34 +535,28 @@ const systems={
       "Tipo de Trabajador"
     ]
   },
-  "Clínica": {
-    "Procesos": [
-      "Asociación Diagnóstico - Genérico",
-      "Asociación Genérico - Producto",
-      "Kairos Cargar Archivos",
-      "Petitorio Por Especialidad",
-      "Replicar Genérico en Diagnósicos",
-      "Replicar Terapeutica a otros Diagnósticos",
-      "Seguimiento Receta"
+  "Cocina": {
+    "Operaciones": [
+        "Cola de comandas",
+        "Preparación de pedidos",
+        "Control de calidad",
+        "Despacho de comandas"
     ],
+
+    "Monitoreo": [
+        "Pedidos recibidos",
+        "Pedidos en preparación",
+        "Pedidos listos",
+        "Pedidos retrasados"
+    ],
+
     "Reportes": [
-      "Kairos Listado de Equivalencia",
-      "Listado Genericos Preescritos",
-      "Listado Precios Catalogos (RESULTADO)",
-      "Ranking de Morbilidad",
-      "Reporte - Petitorio HT",
-      "Reporte - Tabla CIE-10",
-      "Reporte - Tabla de Morbilidad"
-    ],
-    "Tablas": [
-      "Cargar Otros Catalogos",
-      "Kairos Asignar Equivalencia",
-      "Kairos Productos",
-      "Lista de Clasificacion",
-      "Listar Otros Catalogos",
-      "Mantenimiento Tipo Catalogos"
+        "Tiempo de preparación",
+        "Comandas por hora",
+        "Pedidos despachados",
+        "Incidencias de cocina"
     ]
-  }
+}
 };
 const icons={"Compras": "🛒", "Almacenes": "📦", "Ventas": "📊", "Contabilidad": "📒", "Caja": "💵", "Costos": "🧮", "Activo Fijo": "🏢", "Bancos": "🏦", "Cuentas por Pagar": "🧾", "Control de Asistencia": "🕘", "Planilla": "👥", "Clínica": "⚕️"};
 const login=document.getElementById('loginView'),mods=document.getElementById('modulesView'),erp=document.getElementById('erpView');
