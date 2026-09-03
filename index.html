@@ -1,4 +1,187 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bartolito ERP</title><link rel="stylesheet" href="styles.css"></head><body>
-<section id="loginView" class="login-view"><div class="login-card"><div class="login-brand"><img src="logo.png"><div><b>Bartolito</b><small>ERP Empresarial</small></div></div><h2>Iniciar sesión</h2><label>Usuario / correo</label><input id="loginUser" value="admin@bartolito.pe"><label>Contraseña</label><input id="loginPass" type="password" value="123456"><label class="remember"><input type="checkbox"> Recordarme</label><button id="loginBtn">🔒 Ingresar</button><a>¿Olvidó su contraseña?</a><p>Acceso al sistema empresarial Bartolito</p></div></section>
-<section id="modulesView" class="hidden"><header class="module-top"><div class="mini-brand"><img src="logo.png"><b>Bartolito</b></div><div>🔔 <span class="notif">3</span> &nbsp; ⚙ &nbsp; <b>Usuario ERP</b> ▾</div></header><main class="module-page"><div class="module-head"><div><h1>Aplicaciones</h1><p>Aplicaciones construidas desde MENU_UNIFICADO.xlsx</p></div><input id="moduleSearch" placeholder="Buscar aplicación..."></div><div id="moduleGrid" class="module-grid"></div></main></section>
-<section id="erpView" class="hidden"><header class="top"><div class="brand"><img src="logo.png"><div><strong>Bartolito</strong><span>ERP</span></div></div><div class="search"><input id="globalSearch" placeholder="Buscar en Bartolito..."><button>⌕</button></div><div class="top-actions"><button id="appsBtn" title="Aplicaciones">▦</button><button>⚙</button><button>?</button><div class="user">● <b>Usuario ERP</b><small>Administrador</small></div><button id="logoutBtn" title="Salir">↪</button></div></header><nav class="nav" id="nav"></nav><div class="workspace"><aside class="sidebar"><h1 id="moduleTitle">Inicio</h1><div class="card"><div class="card-title">Recordatorios <span>⋮</span></div><p class="empty">Sin contenido</p><a>Configurar este portlet</a></div><div class="card quick"><div class="card-title">Búsqueda rápida</div><label>BUSCAR</label><input id="quickSearch"><label>TIPO</label><select><option>Nombre/ID</option><option>Documento</option><option>RUC</option></select><button id="quickBtn">Buscar</button></div></aside><main><div class="toolbar"><span>Aplicación: <b id="currentModule">Panel principal</b> ▾</span><span>Personalizar ▾ &nbsp; Diseño ▾</span></div><section class="hero"><h2 id="heroTitle">Panel de Gestión Empresarial</h2><p>Seleccione una categoría del menú superior o un acceso del panel.</p></section><div id="groupCards" class="group-grid"></div></main></div></section><div id="toast"></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Finos ERP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section id="loginView" class="login-view">
+    <div class="login-card">
+        <div class="login-brand">
+            <img src="logo.png" alt="Logo Los Finos">
+            <div>
+                <b>Finos360</b>
+                <small>Sistema ERP</small>
+            </div>
+        </div>
+       <center><h2>Iniciar sesión</h2></center> 
+        <label>Usuario / correo</label>
+        <input
+            id="loginUser"
+            value="admin@losfinos.pe"
+        >
+        <label>Contraseña</label>
+        <input
+            id="loginPass"
+            type="password"
+            value="123456"
+        >
+        <label class="remember">
+            <input type="checkbox">
+            Recordarme
+        </label>
+        <button id="loginBtn">
+                Ingresar
+        </button>
+     <center><a>¿Olvidó su contraseña?</a></center>   
+        <p>
+           <center>Acceso al sistema integral de gestión de Los Finos</center> 
+        </p>
+    </div>
+</section>
+
+
+<section id="modulesView" class="hidden">
+    <header class="module-top">
+        <div class="mini-brand">
+            <img src="logo.png" alt="Los Finos">
+            <b>Los Finos</b>
+        </div>
+        <div>
+            🔔
+            <span class="notif">3</span>
+            &nbsp;
+            ⚙️
+            &nbsp;
+            <b>Usuario ERP</b>
+            ▾
+        </div>
+    </header>
+    <main class="module-page">
+        <div class="module-head">
+            <div>
+                <h1>Aplicaciones</h1>
+                <p>
+                    Módulos del sistema integral de gestión de Los Finos
+                </p>
+            </div>
+            <input
+                id="moduleSearch"
+                placeholder="Buscar módulo..."
+            >
+        </div>
+        <div id="moduleGrid" class="module-grid"></div>
+    </main>
+</section>
+
+
+<section id="erpView" class="hidden">
+    <header class="top">
+        <div class="brand">
+            <img src="logo.png" alt="Los Finos">
+            <div>
+                <strong>Los Finos</strong>
+                <span>ERP</span>
+            </div>
+        </div>
+        <div class="search">
+            <input
+                id="globalSearch"
+                placeholder="Buscar en Los Finos..."
+            >
+            <button>⌕</button>
+        </div>
+        <div class="top-actions">
+            <button
+                id="appsBtn"
+                title="Aplicaciones"
+            >
+                ▦
+            </button>
+            <button>⚙️</button>
+            <button>?</button>
+            <div class="user">
+                ●
+                <b>Usuario ERP</b>
+                <small>Administrador</small>
+            </div>
+            <button
+                id="logoutBtn"
+                title="Salir"
+            >
+                ↪️
+            </button>
+        </div>
+    </header>
+
+
+    <nav
+        class="nav"
+        id="nav"
+    ></nav>
+    <div class="workspace">
+        <aside class="sidebar">
+            <h1 id="moduleTitle">
+                Inicio
+            </h1>
+            <div class="card">
+                <div class="card-title">
+                    Recordatorios
+                    <span>⋮</span>
+                </div>
+                <p class="empty">
+                    Sin contenido
+                </p>
+                <a>
+                    Configurar este portlet
+                </a>
+            </div>
+            <div class="card quick">
+                <div class="card-title">
+                    Búsqueda rápida
+                </div>
+                <label> BUSCAR</label>
+                <input id="quickSearch">
+                <label>TIPO </label>
+                <select>
+                    <option>Nombre / ID</option>
+                    <option> Documento</option>
+                    <option>RUC</option>
+                </select>
+                <button id="quickBtn">Buscar</button>
+            </div>
+        </aside>
+
+
+        <main>
+            <div class="toolbar">
+                <span>Aplicación:
+                    <b id="currentModule">Panel principal</b>
+                    ▾
+                </span>
+                <span>
+                    Personalizar ▾
+                    &nbsp;
+                    Diseño ▾
+                </span>
+            </div>
+            <section class="hero">
+                <h2 id="heroTitle">Sistema de Gestión Los Finos</h2>
+                <p>
+                    Seleccione un módulo del menú superior
+                    o una opción del panel para continuar.
+                </p>
+            </section>
+            <div id="groupCards"
+                class="group-grid"
+            ></div>
+        </main>
+    </div>
+</section>
+
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
