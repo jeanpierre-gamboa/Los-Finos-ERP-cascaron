@@ -356,6 +356,7 @@ const systems={
   "Bancos": {
     "Consultas": [
       "Estado comprobante"
+      "Estado comprobanteddds"
     ],
     "Movimientos": [
       "Banco",
