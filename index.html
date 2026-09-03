@@ -178,6 +178,80 @@
                 class="group-grid"
             ></div>
         </main>
+        <section id="ventasDashboard" class="hidden">
+    <div class="ventas-grid">
+        <div class="card">
+            <div class="card-title">Nuevo Pedido - Los Finos</div>
+            
+            <div class="form-row">
+                <label>Canal de Venta</label>
+                <select class="ventas-select" id="canalVenta">
+                    <option>Salón (Presencial)</option>
+                    <option>WhatsApp (Delivery propio)</option>
+                    <option>Llamafood</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>Cliente / Teléfono</label>
+                <input type="text" placeholder="Datos para la boleta...">
+            </div>
+
+            <div class="form-row">
+                <label>Plato / Bebida</label>
+                <input type="text" placeholder="Ej. Lomo saltado, Alitas...">
+                <button class="btn-accion">Agregar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Comanda y Facturación</div>
+            <table class="activity">
+                <thead>
+                    <tr>
+                        <th>Cant.</th>
+                        <th>Descripción</th>
+                        <th>Total</th>
+                        <th>Estado (Regla 5m)</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tablaVentas">
+                    <tr>
+                        <td>1</td>
+                        <td>Chaufa de Pollo</td>
+                        <td>S/ 18.00</td>
+                        <td><span class="badge warn">⏱ 03:45 min</span></td>
+                        <td style="color: red; cursor: pointer;">✖</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Alitas BBQ</td>
+                        <td>S/ 22.00</td>
+                        <td><span class="badge bloqueado">Bloqueado (>5m)</span></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="form-row" style="margin-top: 20px;">
+                <label>Medio de Pago</label>
+                <select class="ventas-select">
+                    <option>Plin / Yape</option>
+                    <option>Efectivo</option>
+                    <option>Tarjeta (Débito/Crédito)</option>
+                    <option>Tarjeta STILOS</option>
+                    <option>Transferencia Bancaria</option>
+                </select>
+            </div>
+
+            <div class="totales-caja">
+                <h3>Total a Pagar: <span>S/ 40.00</span></h3>
+                <button class="btn-facturar">Emitir Boleta Electrónica</button>
+            </div>
+        </div>
+    </div>
+</section>
     </div>
 </section>
 

@@ -77,79 +77,21 @@ const systems={
     ]
   },
   "Ventas": {
-    "Consultas": [
-      "Consulta Comprobante Venta"
+    "Captura de Pedidos": [
+      "Atención en Salón",
+      "Delivery WhatsApp",
+      "Delivery App (Llamafood)"
     ],
-    "Movimientos": [
-      "Detraccion Ventas",
-      "Nota Credito y Debito",
-      "Registro Comprobantes",
-      "Retencion Ventas"
+    "Gestión de Comandas": [
+      "Unificación de Pedidos",
+      "Modificación (Regla 5 min)",
+      "Incidencias y Devoluciones",
+      "Cambio de Plato"
     ],
-    "Procesos": [
-      "Asientos Contables",
-      "Asientos Detraccion Ventas",
-      "Comprobantes de Pago",
-      "Importar Ventas File",
-      "Importar Ventas LOLCLI9000",
-      "Kardex de Productos",
-      "Liquidación de Caja"
-    ],
-    "Punto Venta": [
-      "Aseguradora",
-      "Contratantes",
-      "Entrega de Resultados",
-      "Facturacion",
-      "Facturacion en Grupo",
-      "Orden de Atencion",
-      "Paciente",
-      "Pago Contratante",
-      "Plan de Atencion",
-      "Registrar Resultados de Ordenes",
-      "Tarifario"
-    ],
-    "Reportes": [
-      "Control Cierre Caja",
-      "Dashboard Comercial",
-      "Dashboard Productos Obligatorios",
-      "Dashboard RESULTADOS",
-      "Dashboard Vendedor",
-      "Detalle Por dia",
-      "Detraccion Ventas",
-      "Deuda Clientes por Convenio",
-      "Registro de Ventas",
-      "Registro de Ventas Resumen",
-      "Reporte - Liquidación Caja",
-      "Reporte - Tira Productos",
-      "Reporte - Transacciones",
-      "Reporte - Ventas a Crédito",
-      "Reporte de Operaciones de Caja",
-      "Reporte de Ventas Detalle",
-      "Resumen Ventas",
-      "Resumen Ventas Por Mes",
-      "Resumen de Cobranzas por Convenio",
-      "Resumen por dia",
-      "Servicios Mas Vendidos",
-      "Ventas Por Forma Pago",
-      "Ventas Por Usuario",
-      "Ventas al Credito",
-      "Ventas por Cuentas Contables"
-    ],
-    "Tablas": [
-      "Asignacion de Objetivos",
-      "Categoria de Pago",
-      "Clientes",
-      "Correlativos",
-      "Formas de Pago",
-      "Gestión de Roles",
-      "Gestión de Umbrales",
-      "Medicos",
-      "Origen de Atencion",
-      "PARAMETROS DE VENTAS",
-      "Productos",
-      "Tipo Plan Atencion",
-      "Tipo Procedencia",
-      "Tipo Tarifa"
+    "Facturación y Caja": [
+      "Emisión de Boletas",
+      "Cobranza Multicanal",
+      "Listado de Comprobantes"
     ]
   },
   "Contabilidad": {
@@ -577,5 +519,27 @@ function openERP(name){view(erp);currentModule.textContent=name;moduleTitle.text
 function renderGroups(name){const box=document.getElementById('groupCards');box.innerHTML=Object.entries(systems[name]).map(([g,items])=>`<div class="card group-card"><div class="card-title">${g}</div><div class="group-count">${items.length} opciones</div>${items.slice(0,4).map(i=>`<button data-action="${i}">${i}</button>`).join('')}${items.length>4?`<small>+ ${items.length-4} opciones en el menú</small>`:''}</div>`).join('')}
 appsBtn.onclick=()=>view(mods); logoutBtn.onclick=()=>view(login);
 const toast=document.getElementById('toast');function show(msg){toast.textContent=msg;toast.style.display='block';clearTimeout(window.t);window.t=setTimeout(()=>toast.style.display='none',1800)}
-document.addEventListener('click',e=>{let a=e.target.closest('[data-action]');if(a)show('Abriendo: '+a.dataset.action)});
+document.addEventListener('click', e => {
+    let a = e.target.closest('[data-action]');
+    if (a) {
+        let accion = a.dataset.action;
+        show('Abriendo: ' + accion);
+        
+        const cardsGenerales = document.getElementById('groupCards');
+        const vistaVentas = document.getElementById('ventasDashboard');
+        const heroSection = document.querySelector('.hero');
+
+        // Lógica visual: Si hacen clic en Facturación, mostramos tu interfaz
+        if (accion === 'Facturacion' || accion === 'Registro Comprobantes') {
+            cardsGenerales.classList.add('hidden');
+            heroSection.classList.add('hidden');
+            if(vistaVentas) vistaVentas.classList.remove('hidden');
+        } else {
+            // Para cualquier otro botón, mantenemos la vista por defecto
+            cardsGenerales.classList.remove('hidden');
+            heroSection.classList.remove('hidden');
+            if(vistaVentas) vistaVentas.classList.add('hidden');
+        }
+    }
+});
 document.querySelector('.search button').onclick=()=>show('Búsqueda global: '+globalSearch.value); quickBtn.onclick=()=>show('Búsqueda rápida: '+quickSearch.value);

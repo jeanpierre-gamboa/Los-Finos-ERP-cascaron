@@ -1083,5 +1083,12 @@ main {
         grid-template-columns:
             1fr;
     }
+    .badge.bloqueado {
+    background: #FDECEC;
+    color: var(--rojo);
+    font-size: 10px;
+    font-weight: bold;
+    cursor: not-allowed;
+}
 
 }
