@@ -331,55 +331,19 @@ document.addEventListener('click', e => {
         
         const cardsGenerales = document.getElementById('groupCards');
         const vistaVentas = document.getElementById('ventasDashboard');
-        const vistaAlmacen = document.getElementById('almacenDashboard');
         const heroSection = document.querySelector('.hero');
 
+        // Lógica visual: Si hacen clic en Facturación, mostramos tu interfaz
         if (accion === 'Facturacion' || accion === 'Registro Comprobantes') {
             cardsGenerales.classList.add('hidden');
             heroSection.classList.add('hidden');
-            if(vistaAlmacen) vistaAlmacen.classList.add('hidden');
             if(vistaVentas) vistaVentas.classList.remove('hidden');
-        } else if (accion === 'Almacen' || accion === 'Gestión de Inventario' || accion === 'Actualizacion de inventario') {
-            cardsGenerales.classList.add('hidden');
-            heroSection.classList.add('hidden');
-            if(vistaVentas) vistaVentas.classList.add('hidden');
-            if(vistaAlmacen) vistaAlmacen.classList.remove('hidden');
         } else {
+            // Para cualquier otro botón, mantenemos la vista por defecto
             cardsGenerales.classList.remove('hidden');
             heroSection.classList.remove('hidden');
             if(vistaVentas) vistaVentas.classList.add('hidden');
-            if(vistaAlmacen) vistaAlmacen.classList.add('hidden');
         }
     }
 });
 document.querySelector('.search button').onclick=()=>show('Búsqueda global: '+globalSearch.value); quickBtn.onclick=()=>show('Búsqueda rápida: '+quickSearch.value);
-// Lógica de registro para la vista de Almacén
-document.addEventListener('DOMContentLoaded', () => {
-    const btnGuardarAlmacen = document.querySelector('#almacenDashboard .btn-accion');
-    if (btnGuardarAlmacen) {
-        btnGuardarAlmacen.addEventListener('click', () => {
-            const nombre = document.getElementById('nombreInsumo').value;
-            const cantidad = document.getElementById('cantidadInsumo').value;
-            const unidad = document.getElementById('unidadInsumo').value;
-
-            if (!nombre || !cantidad) {
-                alert('Por favor complete todos los campos');
-                return;
-            }
-
-            const tabla = document.getElementById('tablaAlmacen');
-            const nuevaFila = document.createElement('tr');
-            nuevaFila.innerHTML = `
-                <td>${nombre}</td>
-                <td>${parseFloat(cantidad).toFixed(1)}</td>
-                <td>${unidad}</td>
-                <td><span class="badge" style="background:#28a745; color:white;">Suficiente</span></td>
-            `;
-            tabla.appendChild(nuevaFila);
-
-            document.getElementById('nombreInsumo').value = '';
-            document.getElementById('cantidadInsumo').value = '';
-            show('Insumo registrado correctamente');
-        });
-    }
-});

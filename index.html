@@ -254,64 +254,6 @@
 </section>
     </div>
 </section>
-<!-- SECCIÓN DE ALMACÉN -->
-<section id="almacenDashboard" class="hidden">
-    <div class="ventas-grid">
-        <div class="card">
-            <div class="card-title">Registrar Insumo / Producto</div>
-            
-            <div class="form-row">
-                <label>Nombre del Insumo</label>
-                <input type="text" id="nombreInsumo" placeholder="Ej. Arroz, Aceite...">
-            </div>
-
-            <div class="form-row">
-                <label>Cantidad Inicial</label>
-                <input type="number" id="cantidadInsumo" placeholder="Ej. 50">
-            </div>
-
-            <div class="form-row">
-                <label>Unidad de Medida</label>
-                <select class="ventas-select" id="unidadInsumo">
-                    <option>Kilogramos (Kg)</option>
-                    <option>Litros (L)</option>
-                    <option>Unidades (Unid)</option>
-                    <option>Paquetes</option>
-                </select>
-            </div>
-
-            <button class="btn-accion" style="margin-top: 15px;">Guardar en Almacén</button>
-        </div>
-
-        <div class="card">
-            <div class="card-title">Inventario Actual de Almacén</div>
-            <table class="activity">
-                <thead>
-                    <tr>
-                        <th>Insumo</th>
-                        <th>Stock Actual</th>
-                        <th>Unidad</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-                <tbody id="tablaAlmacen">
-                    <tr>
-                        <td>Arroz Extra</td>
-                        <td>50.0</td>
-                        <td>Kg</td>
-                        <td><span class="badge" style="background:#28a745; color:white;">Suficiente</span></td>
-                    </tr>
-                    <tr>
-                        <td>Aceite Vegetal</td>
-                        <td>4.0</td>
-                        <td>L</td>
-                        <td><span class="badge warn">⏱ Stock Bajo</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
 
 <div id="toast"></div>
 <script src="app.js"></script>
