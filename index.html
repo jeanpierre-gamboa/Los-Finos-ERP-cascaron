@@ -177,6 +177,105 @@
             <div id="groupCards"
                 class="group-grid"
             ></div>
+<section id="cajaDashboard" class="hidden">
+    <div class="caja-dashboard">
+
+        <div class="caja-header">
+            <div>
+                <h2>Gestión de Caja</h2>
+                <p>Control de apertura, movimientos y cierre de caja por turno.</p>
+            </div>
+            <div class="caja-estado"><span>●</span> Caja abierta</div>
+        </div>
+
+        <div class="caja-turno card">
+            <div class="card-title">Caja del Turno</div>
+            <div class="caja-turno-grid">
+                <div><small>Caja</small><strong>Caja Principal</strong></div>
+                <div><small>Responsable</small><strong>Usuario ERP</strong></div>
+                <div><small>Turno</small><strong>Turno Día</strong></div>
+                <div><small>Hora de apertura</small><strong>10:00 a. m.</strong></div>
+            </div>
+        </div>
+
+        <div class="caja-kpis">
+            <div class="caja-kpi card"><small>Fondo inicial</small><strong>S/ 200.00</strong></div>
+            <div class="caja-kpi card"><small>Ingresos del turno</small><strong>S/ 1,240.00</strong></div>
+            <div class="caja-kpi card"><small>Egresos del turno</small><strong>S/ 180.00</strong></div>
+            <div class="caja-kpi card"><small>Saldo esperado</small><strong>S/ 1,260.00</strong></div>
+        </div>
+
+        <div class="caja-grid">
+
+            <div class="card caja-movimientos">
+                <div class="card-title">Movimientos del Turno</div>
+
+                <table class="caja-table">
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Tipo</th>
+                            <th>Concepto</th>
+                            <th>Medio</th>
+                            <th>Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:35</td>
+                            <td><span class="caja-badge ingreso">Ingreso</span></td>
+                            <td>Venta salón</td>
+                            <td>Efectivo</td>
+                            <td>S/ 42.00</td>
+                        </tr>
+                        <tr>
+                            <td>11:10</td>
+                            <td><span class="caja-badge ingreso">Ingreso</span></td>
+                            <td>Venta delivery</td>
+                            <td>Yape</td>
+                            <td>S/ 56.00</td>
+                        </tr>
+                        <tr>
+                            <td>12:20</td>
+                            <td><span class="caja-badge egreso">Egreso</span></td>
+                            <td>Compra menor</td>
+                            <td>Efectivo</td>
+                            <td>S/ 30.00</td>
+                        </tr>
+                        <tr>
+                            <td>13:05</td>
+                            <td><span class="caja-badge egreso">Adelanto</span></td>
+                            <td>Adelanto al personal</td>
+                            <td>Efectivo</td>
+                            <td>S/ 50.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card caja-medios">
+                <div class="card-title">Cobros por Medio de Pago</div>
+                <div class="medio-pago"><span>Efectivo</span><strong>S/ 420.00</strong></div>
+                <div class="medio-pago"><span>Yape / Plin</span><strong>S/ 510.00</strong></div>
+                <div class="medio-pago"><span>Tarjeta</span><strong>S/ 260.00</strong></div>
+                <div class="medio-pago"><span>Transferencia</span><strong>S/ 50.00</strong></div>
+            </div>
+
+        </div>
+
+        <div class="caja-acciones card">
+            <div class="card-title">Operaciones de Caja</div>
+            <div class="caja-action-buttons">
+                <button data-caja-action="ingreso">+ Registrar Ingreso</button>
+                <button data-caja-action="egreso">− Registrar Egreso</button>
+                <button data-caja-action="adelanto">Adelanto al Personal</button>
+                <button data-caja-action="consumo">Consumo del Personal</button>
+                <button class="btn-cierre-caja" data-caja-action="cierre">Cerrar Caja</button>
+            </div>
+        </div>
+
+    </div>
+</section>           
         </main>
         <section id="ventasDashboard" class="hidden">
     <div class="ventas-grid">

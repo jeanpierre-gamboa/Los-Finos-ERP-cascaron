@@ -229,30 +229,32 @@ const systems={
     ]
   },
    //Terminado
-  "Caja": {
-    "Movimientos": [
+"Caja": {
+    "Operaciones": [
         "Apertura de Caja",
-        "Registrar Ingreso",
-        "Registrar Egreso",
-        "Pago a Proveedores",
+        "Registrar Ingreso de Caja",
+        "Registrar Egreso de Caja",
         "Adelanto al Personal",
+        "Registrar Consumo del Personal",
         "Cierre de Caja"
     ],
+
     "Consultas": [
         "Estado de Caja",
         "Movimientos de Caja",
         "Cobros por Forma de Pago",
         "Historial de Cierres"
     ],
+
     "Procesos": [
         "Cuadre de Caja",
         "Conciliación de Medios de Pago"
     ],
+
     "Reportes": [
-        "Resumen de Caja",
-        "Cierre de Caja por Turno",
+        "Resumen de Caja por Turno",
         "Ingresos y Egresos",
-        "Ventas por Forma de Pago",
+        "Cobros por Forma de Pago",
         "Reporte de Descuadres"
     ]
 },
